@@ -10,7 +10,7 @@ if (isset($_POST['cadastrarCat'])) {
   $tb_categoria = $sql->fetchAll();
 
   foreach ($tb_categoria as $key => $value) {
-    if ($value['categoria'] == $categoria) {
+    if ($value['categoria'] == $categoria or $value['categoria'] == '') {
 
 ?>
       <p class="alert-warning">Categoria não adicionada. <?= $categoria; ?> já existe!</p>

@@ -28,11 +28,10 @@ if (isset($_POST['cadastrarProd'])) {
             $extensao = explode('.',($_FILES['imagem']['name']));
             $extensao = strtolower(end($extensao));
             $novo_nome = md5(time()).'.'.$extensao;
-            $diretorio = ("C:\\xampp\\htdocs\\site_venda\\produto\\imgProdutos\\");
+            $diretorio = ("C:\\xampp\\htdocs\\sita_vendaPHP\\produto\\imgProdutos\\");
         
             move_uploaded_file(($_FILES['imagem']['tmp_name']), $diretorio.$novo_nome);
         }
-        
         
         $sql = $pdo->prepare("INSERT INTO tb_produtos VALUES (null,?,?,?,?,?,?)");
         $sql->execute(array($produto, $quantidade, $valor, $categoria, $marca, $novo_nome));

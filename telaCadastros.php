@@ -18,7 +18,6 @@
     include('categoria/categorias.php');
     include('marca/marca.php');
     include('marca/cadastrar_marca.php');
-    #include('produto/produto.php');
     include('produto/cadastrar_produto.php');
     ?>
     <section>
@@ -43,7 +42,7 @@
                 </div>
                 <div class="card-footer text-center"> 
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addproduto">Adicionar</button>
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#editarProduto">Produtos</button>
+                    <a type="button" class="btn btn-success" href='produto/produto.php'>Produtos</a>
                 </div>
             </div>
             <div class="card">

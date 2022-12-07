@@ -10,7 +10,7 @@
       $tb_marca = $sql->fetchAll();
 
       foreach ($tb_marca as $key => $value){
-          if($value['marca'] == $marca){
+          if($value['marca'] == $marca or $value['marca']==''){
             
             ?>
               <p class="alert-warning">Marca não adicionada. <?= $marca; ?> já existe!</p>
